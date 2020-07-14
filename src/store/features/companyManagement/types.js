@@ -1,0 +1,7 @@
+export const THROW_ERROR = 'challenge/companyManagement/throwError'
+export const CANCEL_ERROR = 'challenge/companyManagement/cancelError'
+export const CHANGE_NEW_COMPANY = 'challenge/companyManagement/changeNewCompany'
+export const CHANGE_NEW_PERSON = 'challenge/companyManagement/changeNewPerson'
+export const SUBMIT_NEW_COMPANY = 'challenge/companyManagement/submitNewCompany'
+export const SUBMIT_NEW_PERSON = 'challenge/companyManagement/submitNewPerson'
+export const RUN_PROVIDERS = 'challenge/companyManagement/runProviders'

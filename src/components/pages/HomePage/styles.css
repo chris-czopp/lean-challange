@@ -1,0 +1,16 @@
+.container {
+  margin-top: 30px;
+}
+
+.cardList {
+  margin: 20px;
+}
+
+.cardListHeader {
+  background-color: transparent;
+}
+
+.formContainer {
+  margin-bottom: 30px;
+  padding: 20px;
+}

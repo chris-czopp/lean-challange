@@ -1,0 +1,15 @@
+version: '3.1'
+
+services:
+  lean_challange:
+    build:
+      context: .
+    container_name: lean_challange
+    command: "yarn start"
+    volumes:
+      - .:/src/lean-challange:rw
+      - /src/lean-challange/node_modules
+    ports:
+      - "8080:8080"
+    env_file:
+      - .env

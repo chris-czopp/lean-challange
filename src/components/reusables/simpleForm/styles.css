@@ -1,0 +1,13 @@
+.error {
+  color: #dc3545;
+  font-size: 80%;
+}
+
+.errorBanner {
+  text-align: center;
+}
+
+.headline {
+  text-align: center;
+  font-weight: normal;
+}
