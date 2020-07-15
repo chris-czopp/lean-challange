@@ -132,7 +132,8 @@ function simpleForm ({
                   })
                   onSubmit(data)
                 }
-              }}>{submitButtonLabel}
+              }}
+            >{submitButtonLabel}
             </button>
           </div>
         </div>

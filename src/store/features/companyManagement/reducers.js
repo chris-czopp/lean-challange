@@ -1,18 +1,9 @@
 import * as actions from './actions'
 import * as types from './types'
+import getDefaultState from './getDefaultState'
 import { createDefaultReducer } from '../../helpers'
 
-const initialState = {
-  actionResults: {
-    errors: {},
-    getCompanies: [],
-    getCompanyDetails: {},
-    getCompanyEditableFields: [],
-    getCompanyEmployees: [],
-    getPersonEditableFields: []
-  },
-  actionBeingExecuted: null
-}
+const initialState = getDefaultState()
 
 const handleErrors = (state, errors) => {
   const { actionResults } = state
@@ -64,6 +55,10 @@ const reducers = {
       changeNewPerson: payload.updatedData
     }
   }),
+  clearState: (state) => ({
+    ...state,
+    ...getDefaultState()
+  }),
   runProviders: (state, payload) => ({
     ...state,
     actionResults: {
@@ -98,6 +93,7 @@ const reducers = {
 const actionMap = {
   [types.CANCEL_ERROR]: reducers.cancelError,
   [types.THROW_ERROR]: reducers.throwError,
+  [types.CLEAR_STATE]: reducers.clearState,
   [types.CHANGE_NEW_COMPANY]: reducers.changeNewCompany,
   [types.CHANGE_NEW_PERSON]: reducers.changeNewPerson,
   [types.SUBMIT_NEW_COMPANY]: reducers.submitNewCompany,

@@ -11,7 +11,8 @@ import bootstrap from '../../../init/bootstrap'
 const propTypes = {
   actionResults: PropTypes.object, // results of actions accessed by action names
   actions: PropTypes.object, // action creators
-  match: PropTypes.object
+  match: PropTypes.object,
+  history: PropTypes.object
 }
 
 class HomePage extends Component {
@@ -41,8 +42,18 @@ class HomePage extends Component {
   }
 
   async componentDidMount () {
+    const { actions } = this.props
+
+    this.unlistenRouteChange = this.props.history.listen(() => {
+      actions.clearState()
+    })
+
     await this.runProviders() // actions to be executed prior first meaningful rendering
     this.setFocusOnFirstCompanyFormInput()
+  }
+
+  componentWillUnmount () {
+    this.unlistenRouteChange()
   }
 
   render () {
