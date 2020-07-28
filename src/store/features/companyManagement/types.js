@@ -1,5 +1,6 @@
 export const THROW_ERROR = 'challenge/companyManagement/throwError'
 export const CANCEL_ERROR = 'challenge/companyManagement/cancelError'
+export const CLEAR_STATE = 'challenge/companyManagement/clearState'
 export const CHANGE_NEW_COMPANY = 'challenge/companyManagement/changeNewCompany'
 export const CHANGE_NEW_PERSON = 'challenge/companyManagement/changeNewPerson'
 export const SUBMIT_NEW_COMPANY = 'challenge/companyManagement/submitNewCompany'

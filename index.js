@@ -5,7 +5,7 @@ import { applyMiddleware, createStore } from 'redux'
 import thunkMiddleware from 'redux-thunk'
 import { devToolsEnhancer } from 'redux-devtools-extension'
 import rootReducer from 'store/features/reducers'
-import './src/index.less'
+import './src/index.css'
 import App from 'components/App'
 
 /*

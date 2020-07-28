@@ -2,7 +2,7 @@ import { RUN_PROVIDERS } from '../types'
 import * as providers from './index'
 
 export default (actionResults, providerList) => async (dispatch) => {
-  for (const providerName of providerList) { // here we piping through providers from the list to get data for first meaningful initial rendering
+  for (const providerName of providerList) { // here we're piping through providers from the list to get data for first meaningful initial rendering
     const providerBeingExecuted = providers[providerName](actionResults)
 
     if (providerBeingExecuted instanceof Promise) {
